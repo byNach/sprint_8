@@ -1,11 +1,19 @@
 import React from "react";
-import "../assets/Styled-StarshipList.css"
+import "../assets/Styled-StarshipList.css";
 
-const StarshipList = () => {
-  return (
-    <>
-      <div className="StarshipList"></div>
-    </>
+const StarshipList = (props) => {
+  console.log(props);
+  return props ? (
+    <div className="StarshipListBase">
+      {props.starships.map((starship, index) => (
+        <div className="StarshipList" key={index}>
+          <div className="StarshipName">{starship.name}</div>
+          <div className="StarshipModel">{starship.model}</div>
+        </div>
+      ))}
+    </div>
+  ) : (
+    console.log("No")
   );
 };
 

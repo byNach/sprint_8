@@ -1,0 +1,30 @@
+.StarshipListBase {
+  margin: auto;
+  margin-top: 50px;
+  width: 70%;
+}
+.StarshipList {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  background-color: rgb(30, 30, 30);
+  margin-bottom: 15px;
+  margin-top: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  height: 60px;
+  text-align: left;
+  text-indent: 20px; 
+}
+.StarshipName {
+  color:rgb(160, 160, 160);
+  font-family: 'Ubuntu Mono', monospace;
+  font-size: 28px;
+  margin-bottom: 5px;
+}
+.StarshipModel {
+  color: rgb(160, 160, 160);
+  font-family: 'Ubuntu Mono', monospace;
+  font-size: 22px;
+}

@@ -1,15 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
 import Header from "./Components/Header";
 import Navbar from "./Components/Navbar";
-import StarshipList from "./Components/StarshipList";
+//import StarshipList from "./Components/StarshipList";
+import GetStarship from "./Components/GetApiStarships";
 
 function App() {
-  return (
+  GetStarship();
+   return (
     <>
       <Header />
       <Navbar />
-      <StarshipList />
+      <GetStarship /> 
     </>
   );
 }

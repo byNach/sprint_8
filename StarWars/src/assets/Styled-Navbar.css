@@ -10,11 +10,11 @@
   border-top: 1px solid gray;
 }
 h3 {
-  color: rgb(200, 200, 200);
+  color: rgb(160, 160, 160);
   padding-left: 20px;
   padding-right: 20px;
   font-size: 24px;
   font-family: 'Ubuntu Mono', monospace;
-  border-left: 1px solid rgb(200, 200, 200);
-  border-right: 1px solid rgb(200, 200, 200);
+  border-left: 1px solid rgb(160, 160, 160);
+  border-right: 1px solid rgb(160, 160, 160);
 }
