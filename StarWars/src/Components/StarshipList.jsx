@@ -3,7 +3,7 @@ import "../assets/Styled-StarshipList.css";
 
 const StarshipList = (props) => {
   console.log(props);
-  return props ? (
+  return props !== 0 ? (
     <div className="StarshipListBase">
       {props.starships.map((starship, index) => (
         <div className="StarshipList" key={index}>

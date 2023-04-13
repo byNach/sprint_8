@@ -6,8 +6,7 @@ import Navbar from "./Components/Navbar";
 import GetStarship from "./Components/GetApiStarships";
 
 function App() {
-  GetStarship();
-   return (
+    return (
     <>
       <Header />
       <Navbar />

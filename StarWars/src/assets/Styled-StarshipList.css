@@ -1,3 +1,10 @@
+.Cargando {
+  color:rgb(160, 160, 160);
+  font-family: 'Ubuntu Mono', monospace;
+  font-size: 48px;
+  text-align: center;
+  margin-top: 100px;  
+}
 .StarshipListBase {
   margin: auto;
   margin-top: 50px;
