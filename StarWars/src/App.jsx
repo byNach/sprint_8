@@ -1,10 +1,19 @@
-import './App.css'
+import React, { useState } from "react";
+import "./App.css";
+import Header from "./Components/Header";
+import Navbar from "./Components/Navbar";
+//import StarshipList from "./Components/StarshipList";
+import GetStarship from "./Components/GetApiStarships";
 
 function App() {
-
-  return (
-    <h1>StarWars</h1>
-  )
+  GetStarship();
+   return (
+    <>
+      <Header />
+      <Navbar />
+      <GetStarship /> 
+    </>
+  );
 }
 
-export default App
+export default App;
