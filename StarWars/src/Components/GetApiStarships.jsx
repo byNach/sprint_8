@@ -9,7 +9,6 @@ const GetStarship = () => {
   useEffect(() => {
     axios.get(`https://swapi.dev/api/starships/`).then((res) => {
       setStarships(res.data.results);
-      console.log(res.data.results);
     });
   }, []);
 

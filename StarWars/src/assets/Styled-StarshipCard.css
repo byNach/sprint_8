@@ -1,0 +1,90 @@
+.Card {
+  position: absolute;
+  top: 300px;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  width: 800px;
+  height: auto;
+  z-index: 9999;
+  background-color: rgb(201, 49, 49);
+  color: rgb(160, 160, 160);
+}
+
+
+.close {
+  position: absolute;
+  right: 32px;
+  top: 32px;
+  width: 32px;
+  height: 32px;
+  opacity: 1;
+}
+
+.close:hover {
+  opacity: .5;
+}
+
+.close:before,
+.close:after {
+  position: absolute;
+  left: 15px;
+  content: ' ';
+  height: 35px;
+  width: 3px;
+  background-color: #2980B9;
+}
+
+.close:before {
+  transform: rotate(45deg);
+}
+
+.close:after {
+  transform: rotate(-45deg);
+}
+
+.name {
+display: flex;
+justify-content: center;
+margin-top: 80px;
+margin-bottom: 40px;
+}
+
+.image {
+ display: flex;
+ justify-content: center;
+ margin-bottom: 40px;
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content:flex-start;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content:flex-end;
+}
+
+.pilots {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content:flex-start;
+}
+
+.pilots-photo {
+  display: flex;
+  justify-content:flex-start;
+}
