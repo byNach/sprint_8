@@ -16,6 +16,7 @@ const StarshipCard = (props) => {
         <h3>Manu</h3>
         <h3>Cost</h3>
       </div>
+      <div className="left-right">
       <div className="left">
         <h5>Crew</h5>
         <h5>Pass</h5>
@@ -27,6 +28,7 @@ const StarshipCard = (props) => {
         <h5>Max</h5>
         <h5>Hyper</h5>
         <h5>Max</h5>
+      </div>
       </div>
       <div className="pilots">
         <h5>Pilots:</h5>
