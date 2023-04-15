@@ -6,10 +6,10 @@
   width: 800px;
   height: auto;
   z-index: 9999;
-  background-color: rgb(201, 49, 49);
+  background-color: rgb(40, 40, 40);
   color: rgb(160, 160, 160);
+  font-family: 'Ubuntu Mono', monospace;
 }
-
 
 .close {
   position: absolute;
@@ -18,10 +18,13 @@
   width: 32px;
   height: 32px;
   opacity: 1;
+  border-radius: 20%;
 }
 
 .close:hover {
-  opacity: .5;
+  opacity: .8;
+  transform: scale(1.5);
+  transition: .3s;
 }
 
 .close:before,
@@ -30,7 +33,7 @@
   left: 15px;
   content: ' ';
   height: 35px;
-  width: 3px;
+  width: 5px;
   background-color: #2980B9;
 }
 
@@ -47,6 +50,7 @@ display: flex;
 justify-content: center;
 margin-top: 80px;
 margin-bottom: 40px;
+font-size: 24px;
 }
 
 .image {
@@ -61,13 +65,22 @@ margin-bottom: 40px;
   flex-wrap: nowrap;
   align-items: center;
   margin-bottom: 40px;
+  font-size: 22px;
 }
 
+.left-right {
+display: flex;
+flex-wrap: nowrap;
+flex-direction: row;
+justify-content: space-evenly;
+}
 .left {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content:flex-start;
+  margin-left: 40px;
+  font-size: 22px;
 }
 
 .right {
@@ -75,6 +88,8 @@ margin-bottom: 40px;
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content:flex-end;
+  margin-left: 40px;
+  font-size: 22px;
 }
 
 .pilots {
@@ -82,6 +97,9 @@ margin-bottom: 40px;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content:flex-start;
+  margin-left: 40px;
+  font-size: 22px;
+
 }
 
 .pilots-photo {
