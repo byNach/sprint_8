@@ -3,11 +3,12 @@ import "../assets/Styled-StarshipList.css";
 import StarshipCard from "./StarshipCard";
 
 const StarshipList = (props) => {
-
   const [showStarshipCard, setStarshipCard] = useState(false);
-  const closeCard = () => {setStarshipCard(false)};
+  const closeCard = () => {
+    setStarshipCard(false);
+  };
 
-  return (
+  return !showStarshipCard ? (
     <div className="StarshipListBase">
       {props.starships.map((starship, index) => (
         <div
@@ -19,8 +20,9 @@ const StarshipList = (props) => {
           <div className="StarshipModel">{starship.model}</div>
         </div>
       ))}
-      {showStarshipCard && <StarshipCard closeCard={closeCard}/>}
     </div>
+  ) : (
+    <>({showStarshipCard && <StarshipCard closeCard={closeCard} />})</>
   );
 };
 
