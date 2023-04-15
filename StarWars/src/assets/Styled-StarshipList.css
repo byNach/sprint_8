@@ -23,6 +23,7 @@
   height: 60px;
   text-align: left;
   text-indent: 20px; 
+  cursor: pointer;
 }
 .StarshipName {
   color:rgb(160, 160, 160);
