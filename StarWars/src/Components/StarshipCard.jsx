@@ -1,16 +1,24 @@
 import "../assets/Styled-StarshipCard.css";
+import placeholderImage from '../assets/Images/404.png';
 
 const StarshipCard = (props) => {
-  console.log(props);
+
+  const handleImageError = (event) => {
+    event.target.src = placeholderImage;
+  };
+
   return (
     <div className="Card">
-      <a href="#" className="close" onClick={props.closeCard}>
-      </a>{" "}
+      <a href="#" className="close" onClick={props.closeCard}></a>{" "}
       <div className="name">
         <h1>{props.starship.name}</h1>
       </div>
-      <div className="image">
-        <h1>IMAGEN</h1>
+      <div className="imageDiv">
+        <img
+          className="image"
+          src={`../src/assets/Images/${props.position}.jpg`}
+          onError={handleImageError}
+        ></img>
       </div>
       <div className="center">
         <h3>Model: {props.starship.model}</h3>
@@ -27,7 +35,9 @@ const StarshipCard = (props) => {
         </div>
         <div className="right">
           <h5>Length: {props.starship.length}</h5>
-          <h5>Maximum atmosphering speed: {props.starship.max_atmosphering_speed}</h5>
+          <h5>
+            Maximum atmosphering speed: {props.starship.max_atmosphering_speed}
+          </h5>
           <h5>Hyperdrive rating: {props.starship.hyperdrive_rating}</h5>
           <h5>Maximum speed in realspace: {props.starship.MGLT}</h5>
         </div>
