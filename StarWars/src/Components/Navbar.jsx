@@ -5,8 +5,8 @@ const Navbar = () => {
   return (
     <>
       <div className="Navbar">
-        <h3>HOME</h3>
-        <h3>STARSHIPS</h3>
+        <h3 className="h3Navbar">HOME</h3>
+        <h3 className="h3Navbar">STARSHIPS</h3>
       </div>
     </>
   );

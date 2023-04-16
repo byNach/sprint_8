@@ -1,0 +1,115 @@
+.Card {
+  position: absolute;
+  top: 300px;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  width: 60%;
+  height: auto;
+  z-index: 9999;
+  background-color: rgb(40, 40, 40);
+  color: rgb(160, 160, 160);
+  font-family: 'Ubuntu Mono', monospace;
+}
+
+.close {
+  position: absolute;
+  right: 32px;
+  top: 32px;
+  width: 32px;
+  height: 32px;
+  opacity: 1;
+  border-radius: 20%;
+}
+
+.close:hover {
+  opacity: .8;
+  transform: scale(1.5);
+  transition: .3s;
+}
+
+.close:before,
+.close:after {
+  position: absolute;
+  left: 15px;
+  content: ' ';
+  height: 35px;
+  width: 5px;
+  background-color: #2980B9;
+}
+
+.close:before {
+  transform: rotate(45deg);
+}
+
+.close:after {
+  transform: rotate(-45deg);
+}
+
+.name {
+display: flex;
+justify-content: center;
+margin-top: 80px;
+margin-bottom: 40px;
+font-size: 24px;
+}
+
+.imageDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.image {
+ width: 80%;
+ margin-bottom: 40px;
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  margin-bottom: 40px;
+  font-size: 22px;
+  text-align: center;
+}
+
+.left-right {
+display: flex;
+flex-wrap: nowrap;
+flex-direction: row;
+justify-content: space-evenly;
+margin-left: 20px;
+margin-right: 20px;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content:flex-start;
+  font-size: 28px;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content:flex-end;
+  margin-left: 40px;
+  font-size: 28px;
+}
+
+.pilots {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content:flex-start;
+  margin-left: 40px;
+  font-size: 22px;
+
+}
+
+.pilots-photo {
+  display: flex;
+  justify-content:flex-start;
+}
