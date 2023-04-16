@@ -14,7 +14,11 @@ const GetStarship = () => {
 
   return (
     <>
-      {starShips.length >0 ? <StarshipList starships={starShips} /> : <div className="Cargando">Cargando...</div>}
+      {starShips.length > 0 ? (
+          <StarshipList starships={starShips} />
+      ) : (
+        <div className="Cargando">Cargando...</div>
+      )}
     </>
   );
 };
