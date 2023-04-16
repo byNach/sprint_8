@@ -3,18 +3,26 @@ import "../assets/Styled-StarshipList.css";
 import StarshipCard from "./StarshipCard";
 
 const StarshipList = (props) => {
-  const [showStarshipCard, setStarshipCard] = useState(false);
-  const closeCard = () => {
-    setStarshipCard(false);
+  const [selectedStarship, setSelectedStarship] = useState(null);
+  const [showStarshipList, setShowStarshipList] = useState(true);
+
+  const handleStarshipSelect = (starship, key) => {
+    setSelectedStarship({ starship, key });
+    setShowStarshipList(false);
   };
 
-  return !showStarshipCard ? (
+  const handleStarshipClose = () => {
+    setSelectedStarship(null);
+    setShowStarshipList(true);
+  };
+
+  return showStarshipList ? (
     <div className="StarshipListBase">
       {props.starships.map((starship, index) => (
         <div
           className="StarshipList"
           key={index}
-          onClick={() => setStarshipCard(true)}
+          onClick={() => handleStarshipSelect(starship, index)}
         >
           <div className="StarshipName">{starship.name}</div>
           <div className="StarshipModel">{starship.model}</div>
@@ -22,7 +30,11 @@ const StarshipList = (props) => {
       ))}
     </div>
   ) : (
-    <>({showStarshipCard && <StarshipCard closeCard={closeCard} />})</>
+    <StarshipCard
+      starship={selectedStarship.starship}
+      key={selectedStarship.key}
+      closeCard={handleStarshipClose}
+    />
   );
 };
 
