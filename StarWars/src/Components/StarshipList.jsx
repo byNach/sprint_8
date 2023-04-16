@@ -5,8 +5,10 @@ import StarshipCard from "./StarshipCard";
 const StarshipList = (props) => {
   const [selectedStarship, setSelectedStarship] = useState(null);
   const [showStarshipList, setShowStarshipList] = useState(true);
+  console.log(selectedStarship);
 
   const handleStarshipSelect = (starship, key) => {
+    console.log(starship, key);
     setSelectedStarship({ starship, key });
     setShowStarshipList(false);
   };
@@ -32,7 +34,7 @@ const StarshipList = (props) => {
   ) : (
     <StarshipCard
       starship={selectedStarship.starship}
-      key={selectedStarship.key}
+      position={selectedStarship.key}
       closeCard={handleStarshipClose}
     />
   );
