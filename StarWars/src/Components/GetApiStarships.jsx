@@ -8,6 +8,7 @@ const GetStarship = () => {
  let actualPage = 1;
 
   const [starShips, setStarships] = useState([]);
+  const [final, setFinal] = useState (false);
 
   const loadMoreStarships = () => {
     axios
@@ -17,7 +18,7 @@ const GetStarship = () => {
         res.data.results.forEach((data) => moreStarships.push(data));
         setStarships(oldStarships => [...oldStarships, ...moreStarships]);
       });
-        actualPage += 1;
+      actualPage += 1;
   };
 
   const handleScroll = (e) => {
@@ -26,7 +27,7 @@ const GetStarship = () => {
       e.target.documentElement.scrollHeight
     ) {
       if (actualPage === 5){
-        return(console.log("Final"))
+        setFinal(true)
       }
       else{
         loadMoreStarships()
@@ -41,7 +42,7 @@ const GetStarship = () => {
   return (
     <>
       {starShips.length > 0 ? (
-        <StarshipList starships={starShips} />
+        <StarshipList starships={starShips} final={final}/>
       ) : (
         <div className="Cargando">Cargando...</div>
       )}
