@@ -17,7 +17,7 @@ const GetStarship = () => {
         res.data.results.forEach((data) => moreStarships.push(data));
         setStarships(oldStarships => [...oldStarships, ...moreStarships]);
       });
-      actualPage += 1;
+        actualPage += 1;
   };
 
   const handleScroll = (e) => {
@@ -25,7 +25,12 @@ const GetStarship = () => {
       window.innerHeight + e.target.documentElement.scrollTop + 1 >=
       e.target.documentElement.scrollHeight
     ) {
-      loadMoreStarships()
+      if (actualPage === 5){
+        return(console.log("Final"))
+      }
+      else{
+        loadMoreStarships()
+      }
     }
   };
   useEffect(() => {
