@@ -2,7 +2,7 @@
   position: absolute;
   top: 300px;
   left: 50%;
-  width: 60%;
+  width: 50%;
   height:fit-content;
   transform: translate(-50%, 0%);
   z-index: 9999;
@@ -60,7 +60,7 @@ font-size: 24px;
   align-items: center;
 }
 .image {
- width: 80%;
+ width: 60%;
  margin-bottom: 40px;
 }
 
