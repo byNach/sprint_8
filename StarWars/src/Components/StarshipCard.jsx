@@ -2,7 +2,10 @@ import "../assets/Styled-StarshipCard.css";
 import placeholderImage from "../assets/Images/starships/404.png";
 
 const StarshipCard = (props) => {
-  console.log(props.starship.pilots);
+  console.log(props);
+
+  const starshipNumber = props.starship.url.split("/").slice(-2, -1)[0];
+
   const handleImageError = (event) => {
     event.target.src = placeholderImage;
   };
@@ -14,11 +17,11 @@ const StarshipCard = (props) => {
         <h1>{props.starship.name}</h1>
       </div>
       <div className="imageDiv">
-        <img
-          className="image"
-          src={`../src/assets/Images/starships/${props.position}.jpg`}
-          onError={handleImageError}
-        ></img>
+            <img
+              className="image"
+              src={`../src/assets/Images/starships/${starshipNumber}.jpg`}
+              onError={handleImageError}
+            ></img>
       </div>
       <div className="center">
         <h3>Model: {props.starship.model}</h3>
