@@ -6,7 +6,7 @@ const Header = () => {
     <>
       <div className="Header">
         <iframe
-          class="giphy-embed"
+          className="giphy-embed"
           src="https://giphy.com/embed/KFhwTLFngMTd3GDbd3"
           allowFullScreen
         ></iframe>
