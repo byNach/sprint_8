@@ -31,10 +31,16 @@
   visibility: hidden;
   border-radius: 60%;
   transform: scaleX(0);
-  transition: .1s linear;
+  transition: .15s linear;
 }
 .h3Navbar:hover:before,
 .h3Navbar:focus:before {
   visibility: visible;
   transform: scaleX(1);
+}
+
+a:-webkit-any-link {
+  color: -webkit-link;
+  cursor: pointer;
+  text-decoration: none;
 }

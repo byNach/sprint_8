@@ -1,16 +1,9 @@
-import "./App.css";
-import Header from "./Components/Header";
-import Navbar from "./Components/Navbar";
-import GetStarship from "./Components/GetApiStarships";
+import React from "react";
+import Routing from  "./Components/Routing";
+import "../src/App.css";
 
 function App() {
-  return (
-    <>
-      <Header />
-      <Navbar />
-      <GetStarship />
-    </>
-  );
+  return <Routing />;
 }
 
 export default App;
