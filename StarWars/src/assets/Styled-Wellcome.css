@@ -42,19 +42,20 @@ p {
   height: 400px;
   position: fixed;
   color: #feda4a;
-  font-size: 500%;
+  font-size: 400%;
   font-weight: 600;
   letter-spacing: 6px;
   line-height: 100%;
   perspective: 450px;
   text-align: justify;
   margin-top: 300px;
+  justify-content: center;
 
 }
 
 .crawl {
   position: relative;
-  animation: crawl 65s linear;
+  animation: crawl 70s linear;
   animation-iteration-count: infinite;
 }
 
@@ -69,7 +70,7 @@ p {
 
 @keyframes crawl {
   0% {
-    top: 0;
+    top: -30vh;
     transform: rotateX(20deg) translateZ(0);
   }
 
