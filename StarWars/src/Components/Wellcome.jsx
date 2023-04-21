@@ -1,8 +1,9 @@
 import "../assets/Styled-Wellcome.css";
+
 import Header from "../Components/Header";
 import Navbar from "../Components/Navbar";
 
-export const Wellcome = () => {
+const Wellcome = () => {
   return (
     <>
       <Header />
@@ -42,3 +43,5 @@ export const Wellcome = () => {
     </>
   );
 };
+
+export default Wellcome;
