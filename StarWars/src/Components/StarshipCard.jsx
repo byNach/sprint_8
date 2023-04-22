@@ -11,7 +11,7 @@ const StarshipCard = (props) => {
   };
 
   return (
-    <div className="Card">
+    <div className="StarshipCardBase">
       <a href="#" className="close" onClick={props.closeCard}></a>{" "}
       <div className="name">
         <h1>{props.starship.name}</h1>
