@@ -23,7 +23,32 @@
   justify-content: space-around;
 }
 .Login {
-  color: rgb(200, 200, 200);
+  position: relative;
+  color: rgb(160, 160, 160);
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 24px;
   font-family: 'Ubuntu Mono', monospace;
-  font-size: large;
+  border-left: 1px solid rgb(160, 160, 160);
+  border-right: 1px solid rgb(160, 160, 160);
+  cursor: pointer;
+}
+
+.Login:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 6px;
+  bottom: -8px;
+  left: 0;
+  background: radial-gradient(ellipse, #4efcea, #2980B9, #4efcea);
+  visibility: hidden;
+  border-radius: 60%;
+  transform: scaleX(0);
+  transition: .15s linear;
+}
+.Login:hover:before,
+.Login:focus:before {
+  visibility: visible;
+  transform: scaleX(1);
 }

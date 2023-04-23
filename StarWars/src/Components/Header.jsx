@@ -1,5 +1,5 @@
-import React from "react";
 import "../assets/Styled-Header.css";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -15,8 +15,12 @@ const Header = () => {
           src="../src/assets/Images/star-wars-logo-wallpaper-preview.jpg"
         ></img>
         <div className="LoginBox">
-          <p className="Login">LOG IN</p>
-          <p className="Login">SING UP</p>
+          <Link to="/LoginPage">
+            <p className="Login"> LOG IN</p>
+          </Link>
+          <Link to="/SingUpPage">
+            <p className="Login"> SING UP</p>
+          </Link>
         </div>
       </div>
     </>
