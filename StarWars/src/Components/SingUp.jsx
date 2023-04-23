@@ -30,7 +30,11 @@ const SingUp = () => {
     localStorage.setItem("username", userName);
     localStorage.setItem("password", newPassword);
   };
-
+  const seeLocalStorageLog = () => {
+    console.log(localStorage.getItem("username"));
+    console.log(localStorage.getItem("password"));
+  }
+  
   return (
     <form>
       <div className="login">
@@ -38,6 +42,7 @@ const SingUp = () => {
           {userNameValid & passwordValid ? (
             <>
               {saveUserCredentials()}
+              {seeLocalStorageLog()}
               <div className="LoginSuccesBase">
                 <p className="LoginSucces">Hello {userName},</p>
                 <p className="LoginSucces">You joined the force!</p>
@@ -47,7 +52,7 @@ const SingUp = () => {
                   height="270"
                   className="giphy-embed"
                   allowFullScreen
-                ></iframe>
+                  ></iframe>
               </div>
             </>
           ) : (
