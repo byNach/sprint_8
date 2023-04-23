@@ -1,5 +1,4 @@
 import "../assets/Styled-Wellcome.css";
-
 import Header from "../Components/Header";
 import Navbar from "../Components/Navbar";
 
