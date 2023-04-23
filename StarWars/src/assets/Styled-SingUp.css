@@ -73,3 +73,18 @@ input {
 .btn:hover {
   background-color: #fff129;
 }
+.ErrorMessage {
+  font-size: 18px;
+}
+.LoginSuccesBase {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.LoginSucces {
+  font-size: 30px;
+  color: #fff129;
+  margin-top: 10px;
+}
