@@ -2,7 +2,7 @@ import "../assets/Styled-Login.css";
 import { useState } from "react";
 
 const Login = () => {
-  const [email, setEmail] = useState("");
+  const [name, setName] = useState("");
   const [password, setPassword] = useState("");
   
   return (
