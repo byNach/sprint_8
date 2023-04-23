@@ -17,11 +17,11 @@ const StarshipCard = (props) => {
         <h1>{props.starship.name}</h1>
       </div>
       <div className="imageDiv">
-            <img
-              className="image"
-              src={`../src/assets/Images/starships/${starshipNumber}.jpg`}
-              onError={handleImageError}
-            ></img>
+        <img
+          className="image"
+          src={`../src/assets/Images/starships/${starshipNumber}.jpg`}
+          onError={handleImageError}
+        ></img>
       </div>
       <div className="center">
         <h3>Model: {props.starship.model}</h3>
@@ -47,10 +47,11 @@ const StarshipCard = (props) => {
       </div>
       <div className="pilots">
         <h5>Pilots: </h5>
-        {props.starship.pilots.map((pilotUrl) => {
+        {props.starship.pilots.map((pilotUrl, index) => {
           const pilotNumber = pilotUrl.split("/").slice(-2, -1)[0];
           return (
             <img
+              key={index}
               className="pilots-photo"
               src={`../src/assets/Images/pilots/${pilotNumber}.jpg`}
             ></img>
