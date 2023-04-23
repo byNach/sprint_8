@@ -55,7 +55,7 @@ p {
 
 .crawl {
   position: relative;
-  animation: crawl 70s linear;
+  animation: crawl 75s linear;
   animation-iteration-count: infinite;
 }
 
@@ -71,7 +71,7 @@ p {
 @keyframes crawl {
   0% {
     top: -30vh;
-    transform: rotateX(20deg) translateZ(0);
+    transform: rotateX(18deg) translateZ(0);
   }
 
   100% {
