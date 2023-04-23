@@ -1,6 +1,6 @@
 import Header from "../Components/Header";
 import Navbar from "../Components/Navbar";
-import SingUp from "../Components/Login";
+import SingUp from "../Components/SingUp";
 
 const SingUpPage = () => {
   return (
