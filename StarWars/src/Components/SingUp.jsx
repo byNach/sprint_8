@@ -1,5 +1,5 @@
 import "../assets/Styled-SingUp.css";
-import { useState} from "react";
+import { useState } from "react";
 
 const SingUp = () => {
   const [userName, setUserName] = useState("");
@@ -9,7 +9,7 @@ const SingUp = () => {
   const [errorPasswordMessage, setErrorPasswordMessage] = useState("");
   const [userNameValid, setUserNameValid] = useState(false);
   const [passwordValid, setPasswordValid] = useState(false);
- 
+
   const handleSignUp = (e) => {
     e.preventDefault();
     const isUserNameValid = userName !== "";
@@ -26,7 +26,6 @@ const SingUp = () => {
       : setErrorPasswordMessage("") & setPasswordValid(true);
   };
 
-
   const saveUserCredentials = () => {
     localStorage.setItem("username", userName);
     localStorage.setItem("password", newPassword);
@@ -37,19 +36,21 @@ const SingUp = () => {
       <div className="login">
         <div className="login-screen">
           {userNameValid & passwordValid ? (
-               <div className="LoginSuccesBase">
-               {saveUserCredentials()}
-               <p className="LoginSucces">Hello {userName},</p>
-               <p className="LoginSucces">You joined the force!</p>
-               <iframe
-                 src="https://giphy.com/embed/AcfTF7tyikWyroP0x7"
-                 width="480"
-                 height="270"
-                 className="giphy-embed"
-                 allowFullScreen
-               ></iframe>
-             </div>
-                ) : (
+            <>
+              {saveUserCredentials()}
+              <div className="LoginSuccesBase">
+                <p className="LoginSucces">Hello {userName},</p>
+                <p className="LoginSucces">You joined the force!</p>
+                <iframe
+                  src="https://giphy.com/embed/AcfTF7tyikWyroP0x7"
+                  width="480"
+                  height="270"
+                  className="giphy-embed"
+                  allowFullScreen
+                ></iframe>
+              </div>
+            </>
+          ) : (
             <div className="login-form">
               <div className="control-group">
                 <input
@@ -94,7 +95,6 @@ const SingUp = () => {
                 <p className="ErrorMessage">{errorPasswordMessage}</p>
               ) : null}
             </div>
-         
           )}
         </div>
       </div>
