@@ -42,10 +42,10 @@ input {
   background-color: #ECF0F1;
   border: 2px solid transparent;
   border-radius: 3px;
-  font-size: 18px;
+  font-size: 22px;
   font-weight: 200;
   padding: 10px 0;
-  width: 250px;
+  width: 350px;
   transition: border .5s;
 }
 
@@ -58,24 +58,31 @@ input {
   transition: 0.25s;
   display: block;
   width: 150px;
+  margin-top: 10px;
 }
+
 .LoginP {
   width: 100%;
   color: #ECF0F1;
   margin: 0%;
-  font-size: 22px;
+  font-size: 30px;
+  font-weight: 600;
   margin-top: 5px;
   margin-bottom: 5px;
 }
+
 .LoginP:hover {
   color: #2980B9;
 }
+
 .btn:hover {
   background-color: #fff129;
 }
+
 .ErrorMessage {
   font-size: 18px;
 }
+
 .LoginSuccesBase {
   display: flex;
   flex-wrap: nowrap;
@@ -83,8 +90,14 @@ input {
   justify-content: center;
   align-items: center;
 }
+
 .LoginSucces {
-  font-size: 30px;
+  font-size: 36px;
   color: #fff129;
   margin-top: 10px;
+}
+
+.babyYodaLacasito {
+  width: 500px;
+  border: none;
 }
