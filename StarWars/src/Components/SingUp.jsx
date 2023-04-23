@@ -33,8 +33,8 @@ const SingUp = () => {
   const seeLocalStorageLog = () => {
     console.log(localStorage.getItem("username"));
     console.log(localStorage.getItem("password"));
-  }
-  
+  };
+
   return (
     <form>
       <div className="login">
@@ -46,13 +46,12 @@ const SingUp = () => {
               <div className="LoginSuccesBase">
                 <p className="LoginSucces">Hello {userName},</p>
                 <p className="LoginSucces">You joined the force!</p>
-                <iframe
-                  src="https://giphy.com/embed/AcfTF7tyikWyroP0x7"
-                  width="480"
-                  height="270"
-                  className="giphy-embed"
-                  allowFullScreen
-                  ></iframe>
+                <div>
+                  <img src="..\src\assets\Images\baby-yoda-lacasito.gif"></img>
+                </div>
+                <p>
+                  <a href="https://giphy.com/gifs/disneyplus-the-mandalorian-mando-themandalorian-AcfTF7tyikWyroP0x7"></a>
+                </p>
               </div>
             </>
           ) : (
