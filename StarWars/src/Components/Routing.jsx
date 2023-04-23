@@ -1,5 +1,7 @@
 import HomePage from "./Wellcome";
 import StarshipPage from "../Pages/StarshipPage";
+import LoginPage from "../Pages/LoginPage";
+import SingUpPage from "../Pages/SingUpPage";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 const Routing = () => {
@@ -9,7 +11,8 @@ const Routing = () => {
         <Route index element={<HomePage />} />
         <Route path="/HomePage" element={<HomePage />} />
         <Route path="/StarshipPage" element={<StarshipPage />} />
-
+        <Route path="/LoginPage" element={<LoginPage />} />
+        <Route path="/SingUpPage" element={<SingUpPage />} />
       </Routes>
     </BrowserRouter>
   );
