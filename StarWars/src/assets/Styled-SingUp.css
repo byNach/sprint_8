@@ -1,0 +1,75 @@
+.login {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+}
+
+.login-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: nowrap;
+  background-color: rgb(40, 40, 40);
+  padding: 20px;
+}
+
+.app-title {
+  text-align: center;
+}
+
+.h1Login {
+  color: #fff129;
+  font-family: 'Ubuntu Mono', monospace;
+  font-size: 50px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.control-group {
+  margin-bottom: 10px;
+}
+
+input {
+  text-align: center;
+  background-color: #ECF0F1;
+  border: 2px solid transparent;
+  border-radius: 3px;
+  font-size: 18px;
+  font-weight: 200;
+  padding: 10px 0;
+  width: 250px;
+  transition: border .5s;
+}
+
+.btn {
+  font-family: 'Ubuntu Mono', monospace;
+  background: #2980B9;
+  text-shadow: none;
+  border-radius: 3px;
+  box-shadow: none;
+  transition: 0.25s;
+  display: block;
+  width: 150px;
+}
+.LoginP {
+  width: 100%;
+  color: #ECF0F1;
+  margin: 0%;
+  font-size: 22px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.LoginP:hover {
+  color: #2980B9;
+}
+.btn:hover {
+  background-color: #fff129;
+}
