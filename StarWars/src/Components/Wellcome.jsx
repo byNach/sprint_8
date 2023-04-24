@@ -1,6 +1,7 @@
 import "../assets/Styled-Wellcome.css";
 import Header from "../Components/Header";
 import Navbar from "../Components/Navbar";
+import Footer from "../Components/Footer";
 
 const Wellcome = () => {
   return (
@@ -9,7 +10,6 @@ const Wellcome = () => {
       <Navbar />
       <div className="container">
         <div className="fade"></div>
-
         <section className="star-wars">
           <div className="crawl">
             <div className="title">
@@ -39,6 +39,7 @@ const Wellcome = () => {
           </div>
         </section>
       </div>
+      <Footer />
     </>
   );
 };
