@@ -73,3 +73,9 @@ input {
 .btn:hover {
   background-color: #fff129;
 }
+.wellcome-back {
+  margin-bottom: 35px;
+}
+.logged-gif {
+  width: 450px;
+}
