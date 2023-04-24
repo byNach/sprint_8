@@ -71,7 +71,7 @@ const SingUp = () => {
                 <input
                   type="newPassword"
                   className="login-field"
-                  placeholder="Password"
+                  placeholder="password"
                   id="login-pass"
                   value={newPassword}
                   onChange={(e) => setPassword(e.target.value)}
@@ -82,7 +82,7 @@ const SingUp = () => {
                 <input
                   type="newPassword"
                   className="login-field"
-                  placeholder="repeat Password"
+                  placeholder="repeat password"
                   id="login-repeated-pass"
                   value={repeatedPassword}
                   onChange={(e) => setRepeatedPassword(e.target.value)}
