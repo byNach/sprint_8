@@ -1,16 +1,19 @@
 import "../assets/Styled-Login.css";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const Login = () => {
   const [loginName, setLoginName] = useState("");
   const [loginPassword, setLoginPassword] = useState("");
   const [isLogged, setIsLogged] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
 
   const handleLogin = () => {
     const localName = localStorage.getItem("username");
     const localPassword = localStorage.getItem("password");
     if ((loginName === localName) & (loginPassword === localPassword)) {
       setIsLogged(true);
+    } else {
+      setErrorMessage("Error: Calling Stormtroopers");
     }
   };
 
@@ -22,7 +25,10 @@ const Login = () => {
             <div className="login-screen">
               <div className="login-form">
                 <h1 className="wellcome-back">Wellcome back, {loginName}</h1>
-                <img className="logged-gif" src="../src/assets/Images/starwars.gif"></img>
+                <img
+                  className="logged-gif"
+                  src="../src/assets/Images/starwars.gif"
+                ></img>
               </div>
             </div>
           </div>
@@ -57,6 +63,9 @@ const Login = () => {
                 <a className="btn" href="#" onClick={handleLogin}>
                   <p className="LoginP">LOG IN</p>
                 </a>
+                {errorMessage ? (
+                <p className="ErrorMessage">{errorMessage}</p>
+              ) : null}
               </div>
             </div>
           </div>
