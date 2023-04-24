@@ -1,40 +1,68 @@
 import "../assets/Styled-Login.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Login = () => {
-  const [name, setName] = useState("");
-  const [password, setPassword] = useState("");
-  
+  const [loginName, setLoginName] = useState("");
+  const [loginPassword, setLoginPassword] = useState("");
+  const [isLogged, setIsLogged] = useState(false);
+
+  const handleLogin = () => {
+    const localName = localStorage.getItem("username");
+    const localPassword = localStorage.getItem("password");
+    if ((loginName === localName) & (loginPassword === localPassword)) {
+      setIsLogged(true);
+    }
+  };
+
   return (
-    <form>
-      <div className="login">
-        <div className="login-screen">         
-          <div className="login-form">
-            <div className="control-group">
-              <input
-                type="text"
-                className="login-field"
-                placeholder="username"
-                id="login-name"
-              ></input>
-              <label className="login-field-icon fui-user"></label>
+    <>
+      {isLogged === true ? (
+        <form>
+          <div className="login">
+            <div className="login-screen">
+              <div className="login-form">
+                <h1 className="wellcome-back">Wellcome back, {loginName}</h1>
+                <img className="logged-gif" src="../src/assets/Images/starwars.gif"></img>
+              </div>
             </div>
-            <div className="control-group">
-              <input
-                type="current-password"
-                className="login-field"
-                placeholder="password"
-                id="login-pass"
-              ></input>
-              <label className="login-field-icon fui-lock"></label>
-            </div>
-            <a className="btn" href="#">
-              <p className="LoginP">LOG IN</p>
-            </a>
           </div>
-        </div>
-      </div>
-    </form>
+        </form>
+      ) : (
+        <form>
+          <div className="login">
+            <div className="login-screen">
+              <div className="login-form">
+                <div className="control-group">
+                  <input
+                    type="text"
+                    className="login-field"
+                    placeholder="username"
+                    id="login-name"
+                    value={loginName}
+                    onChange={(e) => setLoginName(e.target.value)}
+                  ></input>
+                  <label className="login-field-icon fui-user"></label>
+                </div>
+                <div className="control-group">
+                  <input
+                    type="current-password"
+                    className="login-field"
+                    placeholder="password"
+                    id="login-pass"
+                    value={loginPassword}
+                    onChange={(e) => setLoginPassword(e.target.value)}
+                  ></input>
+                  <label className="login-field-icon fui-lock"></label>
+                </div>
+                <a className="btn" href="#" onClick={handleLogin}>
+                  <p className="LoginP">LOG IN</p>
+                </a>
+              </div>
+            </div>
+          </div>
+        </form>
+      )}
+    </>
   );
 };
 
