@@ -69,7 +69,7 @@ const SingUp = () => {
               </div>
               <div className="control-group">
                 <input
-                  type="newPassword"
+                  type="password"
                   className="login-field"
                   placeholder="password"
                   id="login-pass"
@@ -80,7 +80,7 @@ const SingUp = () => {
               </div>
               <div className="control-group">
                 <input
-                  type="newPassword"
+                  type="password"
                   className="login-field"
                   placeholder="repeat password"
                   id="login-repeated-pass"
