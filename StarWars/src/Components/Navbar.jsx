@@ -11,7 +11,7 @@ const Navbar = () => {
           <h3 className="h3Navbar">
             HOME
           </h3>
-        </Link>
+        </Link>       
         <Link to="/StarshipPage">
           <h3 className="h3Navbar">
             STARSHIPS
