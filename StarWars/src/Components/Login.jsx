@@ -1,7 +1,10 @@
 import "../assets/Styled-Login.css";
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { IsLoggedContext } from "../Context/isLoggedContext";
 
 const Login = () => {
+  const { logged, changeLoggedTrue } = useContext(IsLoggedContext);
+
   const [loginName, setLoginName] = useState("");
   const [loginPassword, setLoginPassword] = useState("");
   const [isLogged, setIsLogged] = useState(false);
@@ -12,6 +15,7 @@ const Login = () => {
     const localPassword = localStorage.getItem("password");
     if ((loginName === localName) & (loginPassword === localPassword)) {
       setIsLogged(true);
+      changeLoggedTrue();
     } else {
       setErrorMessage("Error: Calling Stormtroopers");
     }
@@ -27,7 +31,7 @@ const Login = () => {
                 <h1 className="wellcome-back">Wellcome back, {loginName}</h1>
                 <img
                   className="logged-gif"
-                  src="../src/assets/Images/starwars.gif"
+                  src="../src/assets/Images/ben-solo-proposal.gif"
                 ></img>
               </div>
             </div>
@@ -64,8 +68,8 @@ const Login = () => {
                   <p className="LoginP">LOG IN</p>
                 </a>
                 {errorMessage ? (
-                <p className="ErrorMessage">{errorMessage}</p>
-              ) : null}
+                  <p className="ErrorMessage">{errorMessage}</p>
+                ) : null}
               </div>
             </div>
           </div>
