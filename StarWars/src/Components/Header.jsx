@@ -1,7 +1,7 @@
 import "../assets/Styled-Header.css";
 import { Link } from "react-router-dom";
-import { IsLoggedContext } from "../Context/isLoggedContext";
 import { useContext } from "react";
+import { IsLoggedContext } from "../Context/isLoggedContext";
 
 const Header = () => {
   const { logged } = useContext(IsLoggedContext);
