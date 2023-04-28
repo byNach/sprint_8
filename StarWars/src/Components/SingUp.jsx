@@ -1,7 +1,10 @@
 import "../assets/Styled-SingUp.css";
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { IsLoggedContext } from "../Context/isLoggedContext";
 
 const SingUp = () => {
+  const { changeLoggedTrue } = useContext(IsLoggedContext);
+
   const [userName, setUserName] = useState("");
   const [newPassword, setPassword] = useState("");
   const [repeatedPassword, setRepeatedPassword] = useState("");
@@ -34,15 +37,19 @@ const SingUp = () => {
     console.log(localStorage.getItem("username"));
     console.log(localStorage.getItem("password"));
   };
+  const setLoggedTrue = () => {
+    changeLoggedTrue();
+  };
 
   return (
     <form>
       <div className="login">
         <div className="login-screen">
-          {userNameValid & passwordValid ? (
+          {userNameValid && passwordValid ? (
             <>
               {saveUserCredentials()}
               {seeLocalStorageLog()}
+              {setLoggedTrue()}
               <div className="LoginSuccesBase">
                 <p className="LoginSucces">Hello {userName},</p>
                 <p className="LoginSucces">You joined the force!</p>
