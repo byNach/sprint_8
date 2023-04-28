@@ -1,7 +1,11 @@
 import "../assets/Styled-Header.css";
 import { Link } from "react-router-dom";
+import { IsLoggedContext } from "../Context/isLoggedContext";
+import { useContext } from "react";
 
 const Header = () => {
+  const { logged } = useContext(IsLoggedContext);
+
   return (
     <>
       <div className="Header">
@@ -15,10 +19,11 @@ const Header = () => {
           src="../src/assets/Images/star-wars-logo-wallpaper-preview.jpg"
         ></img>
         <div className="LoginBox">
-            {localStorage.getItem("logged") === "true" ? (<div><Link to="/LogOutPage"><p className="Login"> LOG OUT</p></Link></div>): (<div><Link to="/LoginPage"><p className="Login">LOG IN</p></Link></div>)}
-          <Link to="/SingUpPage">
+            {logged ? (<div><Link to="/LogOutPage"><p className="Login"> LOG OUT</p></Link></div>): (<div><Link to="/LoginPage"><p className="Login">LOG IN</p></Link></div>)}
+            {logged ? null : (<Link to="/SingUpPage">
             <p className="Login"> SING UP</p>
-          </Link>
+          </Link>)}
+          
         </div>
       </div>
     </>
