@@ -2,16 +2,11 @@ import "../assets/Styled-Login.css";
 import { useContext } from "react";
 import { IsLoggedContext } from "../Context/isLoggedContext";
 
-
 const LogOut = () => {
   const { logged, changeLoggedFalse } = useContext(IsLoggedContext);
-  const reset = "";
 
   const handleLogOut = () => {
-    changeLoggedFalse()
-    localStorage.setItem("logged", logged);
-    localStorage.setItem("username", reset);
-    localStorage.setItem("password", reset);
+    changeLoggedFalse();
   };
 
   return (
