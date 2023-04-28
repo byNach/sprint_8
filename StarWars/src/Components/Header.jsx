@@ -19,11 +19,24 @@ const Header = () => {
           src="../src/assets/Images/star-wars-logo-wallpaper-preview.jpg"
         ></img>
         <div className="LoginBox">
-            {logged ? (<div><Link to="/LogOutPage"><p className="Login"> LOG OUT</p></Link></div>): (<div><Link to="/LoginPage"><p className="Login">LOG IN</p></Link></div>)}
-            {logged ? null : (<Link to="/SingUpPage">
-            <p className="Login"> SING UP</p>
-          </Link>)}
-          
+          {logged ? (
+            <div>
+              <Link to="/LogOutPage">
+                <p className="Login"> LOG OUT</p>
+              </Link>
+            </div>
+          ) : (
+            <div>
+              <Link to="/LoginPage">
+                <p className="Login">LOG IN</p>
+              </Link>
+            </div>
+          )}
+          {logged ? null : (
+            <Link to="/SingUpPage">
+              <p className="Login"> SING UP</p>
+            </Link>
+          )}
         </div>
       </div>
     </>
