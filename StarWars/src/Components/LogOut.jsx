@@ -1,25 +1,23 @@
 import "../assets/Styled-Login.css";
-import { useState } from "react";
+import { useContext } from "react";
+import { IsLoggedContext } from "../Context/isLoggedContext";
+
 
 const LogOut = () => {
-  const [isLogged, setIsLogged] = useState(true);
+  const { logged, changeLoggedFalse } = useContext(IsLoggedContext);
   const reset = "";
 
   const handleLogOut = () => {
-    setIsLogged(false);
-  };
-
-  const saveUserLogged = () => {
-    localStorage.setItem("logged", isLogged);
+    changeLoggedFalse()
+    localStorage.setItem("logged", logged);
     localStorage.setItem("username", reset);
     localStorage.setItem("password", reset);
   };
 
   return (
     <>
-      {isLogged === false ? (
+      {logged === false ? (
         <>
-        {saveUserLogged()}
           <form>
             <div className="login">
               <div className="login-screen">
@@ -45,7 +43,7 @@ const LogOut = () => {
                 <div className="control-group">
                   <label className="login-field-icon fui-lock"></label>
                 </div>
-                <a className="btn" href="#" onClick={handleLogOut}>
+                <a className="btn" href="#" onClick={handleLogOut()}>
                   <p className="LoginP">LOG OUT</p>
                 </a>
               </div>
