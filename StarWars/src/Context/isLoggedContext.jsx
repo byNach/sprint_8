@@ -1,13 +1,16 @@
-import { createContext } from 'react';
-import { useState } from 'react';
+import { createContext, useState } from 'react';
 
-export const IsLoggedContext = createContext("");
+export const IsLoggedContext = createContext();
 
 const IsLoggedProvider = ({ children }) => {
   const [logged, setLogged] = useState(false);
 
+  const changeLogged = () => {
+    setLogged(logged === true ? false : true);
+  };
+
   return (
-    <IsLoggedContext.Provider value={logged}>
+    <IsLoggedContext.Provider value={{logged, changeLogged}}>
       {children}
     </IsLoggedContext.Provider>
   )
