@@ -55,7 +55,7 @@ const Login = () => {
                 </div>
                 <div className="control-group">
                   <input
-                    type="current-password"
+                    type="password"
                     className="login-field"
                     placeholder="password"
                     id="login-pass"
