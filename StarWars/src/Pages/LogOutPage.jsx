@@ -1,17 +1,17 @@
 import Header from "../Components/Header";
 import Navbar from "../Components/Navbar";
-import Wellcome from "../Components/Wellcome";
+import LogOut from "../Components/LogOut";
 import Footer from "../Components/Footer";
 
-const HomePage = () => {
+const LogOutPage = () => {
   return (
     <>
       <Header />
       <Navbar />
-      <Wellcome />
+      <LogOut />
       <Footer />
     </>
   );
 };
 
-export default HomePage;
+export default LogOutPage;

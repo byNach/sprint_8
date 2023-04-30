@@ -1,6 +1,7 @@
 import Header from "../Components/Header";
 import Navbar from "../Components/Navbar";
 import Login from "../Components/Login";
+import Footer from "../Components/Footer";
 
 const LoginPage = () => {
   return (
@@ -8,6 +9,7 @@ const LoginPage = () => {
       <Header />
       <Navbar />
       <Login />
+      <Footer />
     </>
   );
 };

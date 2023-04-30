@@ -1,7 +1,10 @@
 import "../assets/Styled-SingUp.css";
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { IsLoggedContext } from "../Context/isLoggedContext";
 
 const SingUp = () => {
+  const { changeLoggedTrue } = useContext(IsLoggedContext);
+
   const [userName, setUserName] = useState("");
   const [newPassword, setPassword] = useState("");
   const [repeatedPassword, setRepeatedPassword] = useState("");
@@ -24,7 +27,10 @@ const SingUp = () => {
       ? setErrorPasswordMessage("Error: Passwords must match!") &
         setPasswordValid(false)
       : setErrorPasswordMessage("") & setPasswordValid(true);
-  };
+      saveUserCredentials();
+      seeLocalStorageLog()
+      setLoggedTrue()
+    };
 
   const saveUserCredentials = () => {
     localStorage.setItem("username", userName);
@@ -34,15 +40,16 @@ const SingUp = () => {
     console.log(localStorage.getItem("username"));
     console.log(localStorage.getItem("password"));
   };
+  const setLoggedTrue = () => {
+    changeLoggedTrue();
+  };
 
   return (
     <form>
       <div className="login">
         <div className="login-screen">
-          {userNameValid & passwordValid ? (
+          {userNameValid && passwordValid ? (
             <>
-              {saveUserCredentials()}
-              {seeLocalStorageLog()}
               <div className="LoginSuccesBase">
                 <p className="LoginSucces">Hello {userName},</p>
                 <p className="LoginSucces">You joined the force!</p>
@@ -69,7 +76,7 @@ const SingUp = () => {
               </div>
               <div className="control-group">
                 <input
-                  type="newPassword"
+                  type="password"
                   className="login-field"
                   placeholder="password"
                   id="login-pass"
@@ -80,7 +87,7 @@ const SingUp = () => {
               </div>
               <div className="control-group">
                 <input
-                  type="newPassword"
+                  type="password"
                   className="login-field"
                   placeholder="repeat password"
                   id="login-repeated-pass"
