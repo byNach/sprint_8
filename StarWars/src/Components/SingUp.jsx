@@ -27,7 +27,10 @@ const SingUp = () => {
       ? setErrorPasswordMessage("Error: Passwords must match!") &
         setPasswordValid(false)
       : setErrorPasswordMessage("") & setPasswordValid(true);
-  };
+      saveUserCredentials();
+      seeLocalStorageLog()
+      setLoggedTrue()
+    };
 
   const saveUserCredentials = () => {
     localStorage.setItem("username", userName);
@@ -47,9 +50,6 @@ const SingUp = () => {
         <div className="login-screen">
           {userNameValid && passwordValid ? (
             <>
-              {saveUserCredentials()}
-              {seeLocalStorageLog()}
-              {setLoggedTrue()}
               <div className="LoginSuccesBase">
                 <p className="LoginSucces">Hello {userName},</p>
                 <p className="LoginSucces">You joined the force!</p>
